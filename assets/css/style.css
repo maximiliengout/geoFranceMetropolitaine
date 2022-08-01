@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/****** 
+* Reset
+******/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/********** 
+* Variables
+**********/
+/* équivaut à #0a7fad */
+/***************
+* Arrières-plans
+***************/
+.back {
+  background-image: url(../img/france.jpg);
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+}
+
+/******************************
+* Titres, paragraphes et police
+******************************/
+h1 {
+  color: #0a7fad;
+  font-weight: bold;
+  font-size: 51px;
+  border: 1 #fff;
+}
+
+h2 {
+  color: #0a7fad;
+  font-size: 41px;
+}
+
+p {
+  font-size: 1.5rem;
+  color: #02001b;
+}
+
+/****************
+* Carte de France
+****************/
+.map {
+  width: 80vh;
+  fill: rgba(10, 127, 173, 0.51);
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.selectedDepartment {
+  fill: #ba1d93;
+}
+
+/****
+* Jeu
+****/
+.itemToFind {
+  color: #0a7fad;
+  font-weight: bold;
+}
+
+.badAnswerItem {
+  background-color: #c8251c;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 15px 20px;
+  width: 401px;
+}
+
+.goodAnswerItem {
+  background-color: rgba(115, 239, 48, 0.4);
+  border: solid 3px rgba(64, 130, 28, 0.4);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 15px 20px;
+  width: 401px;
+}
+
+.next, .nextActive, #quit {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  height: 41px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 151px;
+}
+
+.next .icon, .nextActive .icon, #quit .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 1px solid #9fa69d;
+  -webkit-transform: translateX(110px);
+          transform: translateX(110px);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  width: 40px;
+}
+
+.next .text, .nextActive .text, #quit .text {
+  color: white;
+  font-weight: bold;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
+}
+
+.nextActive, #quit {
+  background-color: #5bc515;
+}
+
+.nextActive .icon, #quit .icon {
+  border-left: 1px solid #37ae1f;
+}
+
+.nextActive:hover, #quit:hover {
+  background-color: #3a8d03;
+}
+
+.nextActive:hover .icon, #quit:hover .icon {
+  width: 150px;
+  border-left: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nextActive:hover .text, #quit:hover .text {
+  color: transparent;
+}
+
+.nextActive:focus, #quit:focus {
+  outline: none;
+}
+
+#quit {
+  background-color: #e00606;
+}
+
+#quit .icon {
+  border-left: 1px solid #c41b1b;
+}
+
+#quit:hover {
+  background-color: #9b0101;
+}
+
+#highscores,
+#menu,
+#quiz,
+#score {
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: solid 5px;
+  border-radius: 25px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.mainButton {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: solid 3px #0a7fad;
+  border-radius: 50px;
+  color: #0a7fad;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 20px;
+  margin: 10px 0;
+  width: 401px;
+}
+
+.mainButton:hover {
+  background-color: #0a7fad;
+  color: #fff;
+}
+
+/******
+* Score
+******/
+.bi-check-square-fill {
+  color: green;
+}
+
+.bi-x-square-fill {
+  color: #d20707;
+}
+
+.bi-trophy-fill {
+  color: goldenrod;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.githubIcon,
+.githubIcon:hover {
+  background-color: #171515;
+  color: var(--text-color);
+}
+
+.linkedInIcon,
+.linkedInIcon:hover {
+  background-color: #0e76a8;
+  color: var(--text-color);
+}
+
+.mailIcon,
+.mailIcon:hover {
+  background-color: #000080;
+  color: var(--text-color);
+}
+
+.mySiteIcon,
+.mySiteIcon:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.sources,
+.sources:hover {
+  background-color: #ef881a;
+  color: white;
+}
+
+#sourcesModal .modal-header {
+  background-color: #0a7fad;
+  color: #fff;
+}
+
+#sourcesModal li::before {
+  content: "⬪ ";
+  color: #0a7fad;
+  text-align: justify;
+}
+
+#sourcesModal ul {
+  list-style: none;
+}
+
+.btn-primary-color {
+  background-color: white;
+  border: solid 2px #0a7fad;
+  color: #0a7fad;
+}
+
+.btn-primary-color:hover {
+  background-color: #0a7fad;
+  color: white;
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+  cursor: pointer;
+}
+
+.goodAnswerText {
+  color: green;
+  font-weight: bold;
+}
+
+.badAnswerText {
+  color: red;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainButton {
+    width: 100%;
+  }
+  #nbOfGoodAnswers, #nbOfBadAnswers, #percentageOfGoodAnswers {
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
